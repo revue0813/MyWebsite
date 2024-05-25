@@ -1,3 +1,18 @@
-{% extends "base.html" %}
+<div class="wrapper">
+  {% extends "base.html" %} {% block title %}- Homepage{% endblock %} {% block
+  body %}
 
-{% block title %}- Homepage{% endblock %}
+  <div class="homepage-content">
+    <div class="container">
+      <div class="content">
+        <h1 class="clean-background text-light display-1">Welcome to my Webpage</h1>
+        <p class="clean-background text-light fs-5">
+          Thank you for viewing my page. Here you can find information about me
+          and see some of my skills and accolades. Feel free to use the buttons
+          at the top of the page to navigate and view additional content.
+        </p>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</div>

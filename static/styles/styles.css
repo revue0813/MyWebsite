@@ -1,5 +1,17 @@
-body {
+body, html {
     background-color: #182235;
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.navbar {
+    z-index: 10;
 }
 
 .me-auto .nav-item {
@@ -10,6 +22,97 @@ body {
 .navbar-collapse .nav-item {
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.content {
+    flex: 1;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.content::before,
+.content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc((100% - 800px) / 2); /* Adjust padding width */
+    background: transparent; /* Adjust padding color */
+}
+
+.content::before {
+    left: 0;
+}
+
+.content::after {
+    right: 0;
+}
+
+.clean-background {
+    background: linear-gradient(to bottom, rgba(52, 58, 64, 0.6), rgba(24, 34, 53, 0.6));
+    background-color: rgba(52, 58, 64, 0.8);
+    background-blend-mode: darken;
+    border-radius: 20px;
+    padding: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.homepage-content {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding-top: 60px;
+    position: relative;
+    background-image: url('/static/images/wife_and_me.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.homepage-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.homepage-content h1 {
+    position: relative;
+    margin-top: -60px;
+    z-index: 2;
+}
+
+.homepage-content p {
+    position: relative;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.text-container {
+    text-align: center;
+}
+
+.text-container p {
+    display: inline;
+}
+
+.container {
+    display: flex;
+}
+
+.left-padding, .right-padding {
+    flex: 1;
+}
+
+.footer {
+    height: 56px;
 }
 
 /* color scheme colors:
