@@ -1,3 +1,50 @@
-{% extends "base.html" %}
+<div class="wrapper">
+  {% extends "base.html" %} {% block title %}- Links{% endblock %} {% block body %}
+  <div class="link-content clean-background">
+    <div class="container">
+      <div class="content">
+        <h1 class="text-light display-1">Explore My Professional Profiles</h1>
+        <p class="text-light">
+          I invite you to explore my professional profiles and portfolio to gain
+          a comprehensive understanding of my skills, experience, and the value
+          I can offer. Each link provides insight into my work, accomplishments,
+          and professional journey.
+        </p>
+        <div class="link-buttons">
+          <p class="link-text text-light">
+            If you need to reach out, use the contact button below to be
+            redirected to the contact page
+          </p>
+          <li class="text-light">
+            <a class="btn btn-primary" href="#">Facebook</a>
+          </li>
+          <p class="link-text text-light">
+            If you need to reach out, use the contact button below to be
+            redirected to the contact page
+          </p>
+          <li class="text-light">
+            <a class="btn btn-primary" href="#">Github</a>
+          </li>
+          <p class="link-text text-light">
+            If you need to reach out, use the contact button below to be
+            redirected to the contact page
+          </p>
+          <li class="text-light">
+            <a class="btn btn-primary" href="#">LinkedIn</a>
+          </li>
+          <p class="link-text text-light">
+            If you need to reach out, use the contact button below to be
+            redirected to the contact page
+          </p>
+          <li class="text-light">
+            <a class="btn btn-primary" href="{{ url_for('contact') }}"
+              >Contact Me</a
+            >
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
 
-{% block title %}- Links{% endblock %}
+  {% endblock %}
+</div>
