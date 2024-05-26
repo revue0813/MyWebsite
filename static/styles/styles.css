@@ -111,6 +111,44 @@ body, html {
     flex: 1;
 }
 
+.resume-head, .DD214-head {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.resume-button-container, .DD214-button-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.resume-button-container a, .DD214-button-container a {
+    padding: 10px;
+}
+
+.button-space {
+    width: 20px;
+    display: inline-block;
+}
+
+.resume-container, .DD214-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 80vh;
+    overflow: hidden;
+}
+
+.resume-container embed, .DD214-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 .footer {
     height: 56px;
 }

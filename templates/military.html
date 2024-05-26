@@ -1,0 +1,35 @@
+<div class="wrapper">
+  {% extends "base.html" %} {% block title %}- Resume{% endblock %} {% block
+  body %}
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col">
+      <h2 class="DD214-head text-light">My Military Service History</h2>
+      <div class="DD214-button-container">
+        <a
+          href="{{ url_for('download_file', filename='DD214redacted.pdf') }}"
+          class="btn btn-secondary"
+          download
+          >Download My DD214 (PDF, SSN redacted)</a
+        >
+      </div>
+      <div class="DD214-container">
+        <embed
+          src="{{ url_for('static', filename='documents/DD214redacted.pdf') }}#view=Fit"
+          type="application/pdf"
+          class="embed-responsive"
+        />
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <p></p>
+    </div>
+    <div class="col"></div>
+  </div>
+  {% endblock %}
+</div>
