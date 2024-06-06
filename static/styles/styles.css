@@ -155,12 +155,53 @@ body, html {
     border: none;
 }
 
-.link-buttons a {
+.link-content {
+    flex: 1;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.link-content::before,
+.link-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: transparent; /* Adjust padding color */
+}
+
+.link-content p {
+    width: calc((100% - 800px) / 2); /* Adjust padding width */
+    margin: auto;
+    min-width: 400px;
+    padding: 20px;
+}
+
+.link-buttons {
     margin: 10px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link-buttons a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.link-buttons img {
+    width: 250px;
+    height: 250px;
+    border: none;
 }
 
 .link-text {
     padding-top: 25px;
+}
+
+.link-spacer {
+    padding-top: 150px;
 }
 
 .footer {
