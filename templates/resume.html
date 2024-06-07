@@ -1,36 +1,33 @@
-<div class="wrapper">
-  {% extends "base.html" %} {% block title %}- Resume{% endblock %} {% block
-  body %}
+{% extends "base.html" %} {% block title %}- Resume{% endblock %} {% block body %}
 
-  <div class="row">
-    <div class="col-sm-2"></div>
-    <div class="col">
-      <h2 class="resume-head text-light">My Resume</h2>
-      <div class="resume-button-container">
-        <a
-          href="{{ url_for('download_file', filename='newResume.pdf') }}"
-          class="btn btn-secondary"
-          download
-          >Download My Resume (PDF)</a
-        >
-        <div class="button-space"></div>
-        <a
-          href="{{ url_for('download_file', filename='newResume.txt') }}"
-          class="btn btn-secondary"
-          download
-          >Download My Resume (TXT)</a
-        >
-      </div>
-      <div class="resume-container">
-        <embed
-          src="{{ url_for('static', filename='documents/newResume.pdf') }}#view=Fit"
-          type="application/pdf"
-          class="embed-responsive"
-        />
-      </div>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col">
+    <h2 class="resume-head text-light">My Resume</h2>
+    <div class="resume-button-container">
+      <a
+        href="{{ url_for('download_file', filename='newResume.pdf') }}"
+        class="btn btn-secondary"
+        download
+        >Download My Resume (PDF)</a
+      >
+      <div class="button-space"></div>
+      <a
+        href="{{ url_for('download_file', filename='newResume.txt') }}"
+        class="btn btn-secondary"
+        download
+        >Download My Resume (TXT)</a
+      >
     </div>
-    <div class="col-sm-2"></div>
-    <p></p>    
+    <div class="resume-container">
+      <embed
+        src="{{ url_for('static', filename='documents/newResume.pdf') }}#view=Fit"
+        type="application/pdf"
+        class="embed-responsive"
+      />
+    </div>
   </div>
-  {% endblock %}
+  <div class="col-sm-2"></div>
+  <p></p>    
 </div>
+{% endblock %}

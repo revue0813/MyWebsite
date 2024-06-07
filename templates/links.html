@@ -1,43 +1,41 @@
-<div class="wrapper">
-  {% extends "base.html" %} {% block title %}- Links{% endblock %} {% block body %}
-  <div class="link-content clean-background">
-    <div class="link-content">
-      <h1 class="text-light display-1">Explore My Professional Profiles</h1>
-      <p class="text-light">
-        I invite you to explore my professional profiles and portfolio to gain
-        a comprehensive understanding of my skills, experience, and the value
-        I can offer. Each link provides insight into my work, accomplishments,
-        and professional journey.
-      </p>
-      <div class="link-spacer"></div>
-      <div class="mt-5 link-buttons text-light">
-        <div class="mx-5">
-          <a href="https://github.com/revue0813" target="_blank">
-            <img src="{{ url_for('static', filename='images/github-logo.png') }}" alt="github">
-            <p>Github</p>
-          </a>
-        </div>
-        <div class="mx-5">
-          <a href="https://www.linkedin.com/in/michael-gibson0813" target="_blank">
-            <img src="{{ url_for('static', filename='images/linkedin-logo.png') }}" alt="linkedIn">
-            <p>LinkedIn</p>
-          </a>
-        </div>
-        <div class="mx-5">
-          <a href="https://www.facebook.com/ThaAfroSamurai" target="_blank">
-            <img src="{{ url_for('static', filename='images/facebook-logo.png') }}" alt="fb">
-            <p>Facebook</p>
-          </a>
-        </div>
-        <div class="mx-5">
-          <a href="{{ url_for('contact') }}" target="_blank">
-            <img src="{{ url_for('static', filename='images/email-logo.png') }}" alt="email">
-            <p>Contact Me</p>
-          </a>
-        </div>
+{% extends "base.html" %} {% block title %}- Links{% endblock %} {% block body %}
+<div class="link-content clean-background">
+  <div>
+    <h1 class="text-light display-1">Explore My Professional Profiles</h1>
+    <p class="text-light fs-5">
+      I invite you to explore my professional profiles and portfolio to gain
+      a comprehensive understanding of my skills, experience, and the value
+      I can offer. Each link provides insight into my work, accomplishments,
+      and professional journey.
+    </p>
+    <div class="link-spacer"></div>
+    <div class="mt-5 link-buttons text-light">
+      <div class="mx-5">
+        <a href="https://github.com/revue0813" target="_blank">
+          <img src="{{ url_for('static', filename='images/github-logo.png') }}" alt="github">
+          <p>Github</p>
+        </a>
       </div>
-      <div class="link-spacer"></div>
+      <div class="mx-5">
+        <a href="https://www.linkedin.com/in/michael-gibson0813" target="_blank">
+          <img src="{{ url_for('static', filename='images/linkedin-logo.png') }}" alt="linkedIn">
+          <p>LinkedIn</p>
+        </a>
+      </div>
+      <div class="mx-5">
+        <a href="https://www.facebook.com/ThaAfroSamurai" target="_blank">
+          <img src="{{ url_for('static', filename='images/facebook-logo.png') }}" alt="fb">
+          <p>Facebook</p>
+        </a>
+      </div>
+      <div class="mx-5">
+        <a href="{{ url_for('contact') }}" target="_blank">
+          <img src="{{ url_for('static', filename='images/email-logo.png') }}" alt="email">
+          <p>Contact Me</p>
+        </a>
+      </div>
     </div>
+    <div class="link-spacer"></div>
   </div>
-  {% endblock %}
 </div>
+{% endblock %}

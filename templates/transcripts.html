@@ -1,30 +1,25 @@
-<div class="wrapper">
-    {% extends "base.html" %} {% block title %}- Transcripts{% endblock %} {% block
-    body %}
-  
-    <div class="row">
-      <div class="col-sm-2"></div>
-      <div class="col">
-        <h2 class="TS-head text-light">My College Transcripts</h2>
-        <div class="TS-button-container">
-          <a
-            href="{{ url_for('download_file', filename='UOtranscript.pdf') }}"
-            class="btn btn-secondary"
-            download
-            >Download My College Transcripts (PDF)</a
-          >
-        </div>
-        <div class="TS-container">
-          <embed
-            src="{{ url_for('static', filename='documents/UOtranscript.pdf') }}#view=Fit"
-            type="application/pdf"
-            class="embed-responsive"
-          />
-        </div>
-      </div>
-      <div class="col-sm-2"></div>
+{% extends "base.html" %} {% block title %}- Transcripts{% endblock %} {% block body %}
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col">
+    <h2 class="TS-head text-light">My College Transcripts</h2>
+    <div class="TS-button-container">
+      <a
+        href="{{ url_for('download_file', filename='UOtranscript.pdf') }}"
+        class="btn btn-secondary"
+        download
+        >Download My College Transcripts (PDF)</a
+      >
     </div>
-    <p></p>
-    {% endblock %}
+    <div class="TS-container">
+      <embed
+        src="{{ url_for('static', filename='documents/UOtranscript.pdf') }}#view=Fit"
+        type="application/pdf"
+        class="embed-responsive"
+      />
+    </div>
   </div>
-  
+  <div class="col-sm-2"></div>
+</div>
+<p></p>
+{% endblock %}

@@ -1,7 +1,118 @@
-<div class="wrapper">
-  {% extends "base.html" %} {% block title %}- Skills{% endblock %} {% block body %}
-  <div>
-   <p>here is where my skills go 
-  </div>
-  {% endblock %}
+{% extends "base.html" %} {% block title %}- Skills{% endblock %} {% block body %}
+<div class="skills-description clean-background text-light">
+  <h1 class="display-1">Skills</h1>
 </div>
+<div class="skills-description clean-background text-light fs-5">
+  <p>
+    Welcome to my Skills page! Here, you'll find a comprehensive 
+    overview of my professional competencies, categorized into Soft Skills 
+    and Hard Skills. This breakdown is designed to give you a clear 
+    understanding of my expertise and how I can contribute to your 
+    team or project.
+  </p>
+</div>
+<div class="skills-container text-light">
+  <!-- SOFT SKILLS -->
+  <div class="skills-section">
+    <h2 class="display-5">Soft Skills</h2>
+    <div class="skill">
+      <p>Problem-Solving</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 95%;">95%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Customer Service</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 90%;">90%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Communication</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 85%;">85%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Teamwork</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 85%;">85%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Leadership</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 70%;">70%</div>
+      </div>
+    </div>
+  </div>
+  <!-- HARD SKILLS -->
+  <div class="skills-section">
+    <h2 class="display-5">Hard Skills</h2>
+    <div class="skill">
+      <p>Software Troubleshooting</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 90%;">90%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Hardware Troubleshooting</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 90%;">90%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Computer Building</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 90%;">90%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Microsoft Software</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 85%;">85%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Documentation</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 65%;">65%</div>
+      </div>
+    </div>
+  </div>
+  <!-- CODING SKILLS -->
+  <div class="skills-section">
+    <h2 class="display-5">Coding Skills</h2>
+    <div class="skill">
+      <p>Python</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 80%;">80%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>C++</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 70%;">70%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>HTML</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 65%;">65%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>Java</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 55%;">55%</div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>SQL</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 40%;">40%</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
