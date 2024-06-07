@@ -4,12 +4,6 @@ Gardner, KS
 revue0813@gmail.com
 
 Experience
-Caterer and Server 
-KC Hopps                   09/2021 - 08/2023
-Kansas City , KS
-Demonstrated ability to adapt to various event venues and  unexpected challenges, ensuring seamless execution of catering services  through quick thinking and problem-solving skills.
-Maintained meticulous attention to detail in food preparation,  presentation, and service, translating to a keen eye for detail in  troubleshooting and resolving technical issues.
-Provided exceptional customer service to diverse clientele,  effectively addressing their needs and preferences, showcasing strong  interpersonal skills crucial for client-facing IT roles.
 Unit Armorer 
 United States Army                   08/2013 - 10/2014
 Fort Stewart  , GA
@@ -17,6 +11,14 @@ Managed and maintained an inventory of sensitive and valuable  military equipme
 Developed expertise in the maintenance, repair, and  troubleshooting of a wide range of specialized military equipment and  weapons systems, showcasing a strong technical aptitude applicable to  understanding and  resolving IT hardware issues.
 Maintained comprehensive records of equipment maintenance,  repairs, and  inventory transactions, demonstrating proficiency in  documentation and  record-keeping
 Provided training and guidance to unit personnel on equipment  operation,  safety procedures, and maintenance protocols, showcasing  effective  communication and teaching skills applicable to user support  and  training in IT systems and software.
+IT Support 
+Microsoft                   03/2008 - 03/2010
+Olathe , KS
+Played a pivotal role in addressing the widespread Xbox 360 "Red Ring of Death" (RROD) issue, providing technical support to affected users, resolving hardware failures, and ensuring customer satisfaction during a critical period.
+Effectively communicated complex technical information to non-technical customers, providing clear instructions and support to resolve their issues and maintain customer loyalty.
+Maintained detailed records of customer interactions and technical resolutions, helping to identify patterns and inform the development of long-term fixes for the RROD issue.
+Managed a high volume of support requests efficiently and effectively during a major product crisis, demonstrating resilience, patience, and a commitment to exceptional customer service.
+Contributed to the refinement of support processes and protocols, streamlining the troubleshooting workflow and reducing the time to resolution for RROD cases.
 
 Skills
 Customer service
@@ -32,9 +34,3 @@ Education
 University of Missouri - Kansas City                   Information Technology 
 08/2024
 Kansas City , MO
-
-Programming Languages
-C++
-Python
-HTML
-SQL

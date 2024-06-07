@@ -7,11 +7,11 @@ body, html {
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .navbar {
     z-index: 10;
+    position: relative;
 }
 
 .me-auto .nav-item {
@@ -34,11 +34,11 @@ body, html {
 .content::before,
 .content::after {
     content: "";
-    position: absolute;
+    position: relative;
     top: 0;
     bottom: 0;
-    width: calc((100% - 800px) / 2); /* Adjust padding width */
-    background: transparent; /* Adjust padding color */
+    width: calc((100% - 800px) / 2);
+    background: transparent;
 }
 
 .content::before {
@@ -57,48 +57,41 @@ body, html {
     padding: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); */
     text-shadow: 3px 3px 7px rgba(0, 0, 0, 1);
-
-
 }
 
 .homepage-content {
     display:flex;
     justify-content: center;
     align-items:center;
-    padding-top: 60px;
     position: relative;
-    background-image: url('/static/images/wife_and_me.jpg');
+    /* background-image: url('/static/images/wife_and_me.jpg');
     background-size: cover;
     background-position: top center;
-    background-repeat: no-repeat;
-    height: 100vh;
+    background-repeat: no-repeat; */
 }
 
 .homepage-content::before {
     content: '';
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     z-index: 1;
 }
 
 .homepage-content h1 {
     position: relative;
     -webkit-text-stroke: 1px #f8f9fa;
-    margin-top: -100px;
     z-index: 2;
     margin-bottom: 100px;
 }
 
 .homepage-content p {
     position: relative;
-    -webkit-text-stroke: 1px #f8f9fa;
     margin-top: 20px;
     z-index: 2;
-
 }
 
 .text-container {
@@ -141,17 +134,15 @@ body, html {
 .resume-container, .DD214-container, .TS-container {
     position: relative;
     width: 100%;
-    height: 0;
-    padding-bottom: 80vh;
     overflow: hidden;
 }
 
 .resume-container embed, .DD214-container embed, .TS-container embed {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 1080px;
     border: none;
 }
 
@@ -165,14 +156,14 @@ body, html {
 .link-content::before,
 .link-content::after {
     content: "";
-    position: absolute;
+    position: relative;
     top: 0;
     bottom: 0;
-    background: transparent; /* Adjust padding color */
+    background: transparent;
 }
 
 .link-content p {
-    width: calc((100% - 800px) / 2); /* Adjust padding width */
+    width: calc((100% - 800px) / 2);
     margin: auto;
     min-width: 400px;
     padding: 20px;
@@ -206,6 +197,53 @@ body, html {
 
 .footer {
     height: 56px;
+}
+
+.header-image {
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-position:top;
+}
+
+.header-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to bottom, transparent, rgba(24, 34, 53, 1));
+}
+
+.profile-picture {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-text-container {
+    display: flex;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.header-text-container img {
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+    background-color:aliceblue;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* color scheme colors:

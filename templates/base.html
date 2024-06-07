@@ -26,9 +26,6 @@
               <a class="nav-link" href="{{ url_for('index') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('skills') }}">Skills</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="{{ url_for('resume') }}">Resume</a>
             </li>
             <li class="nav-item">
@@ -55,6 +52,12 @@
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('skills') }}">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('portfolio') }}">Portfolio</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{{ url_for('links') }}">Links</a>
             </li>
             <li class="nav-item">
@@ -64,6 +67,25 @@
         </div>
       </div>
     </nav>
+    
+    <header class="header-image" style="background-image: url('{{ image_url }}');">
+      <img src="{{ url_for('static', filename='images/profile-picture.jpg') }}"
+      alt="Profile Picture"
+      class="profile-picture">
+      <div class="header-text-container">
+        <div>
+          <a href="https://github.com/revue0813" target="_blank">
+            <img src="\static\images\github-logo.png" alt="github">
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/michael-gibson0813" target="_blank">
+            <img src="\static\images\linkedin-logo.png" alt="linkedin">
+          </a>
+        </div>
+      </div>
+    </header>
+
     {% block body %} {% endblock %}
   </body>
 
