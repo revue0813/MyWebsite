@@ -1,5 +1,8 @@
-{% extends "base.html" %} {% block title %}- Home{% endblock %} {% block body%}
+{% extends "base.html" %} 
 
+{% block title %}- Home{% endblock %} 
+
+{% block body%}
 <div class="homepage-content">
   <div class="container">
     <div class="content">
@@ -21,4 +24,9 @@
     </div>
   </div>
 </div>
+<footer>
+  <div class="footer-image text-light">
+    <img src="{{ image_url }}" alt="footer-img">
+  </div>
+</footer>
 {% endblock %}

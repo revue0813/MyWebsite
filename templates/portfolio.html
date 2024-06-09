@@ -1,5 +1,26 @@
-{% extends "base.html" %} {% block title %}- Home{% endblock %} {% block body%}
+{% extends "base.html" %} 
 
-PORTFOLIO HERE
+{% block title %}- Portfolio{% endblock %} 
 
+{% block body%}
+<div class="container text-light text-center clean-background">
+    <h1 class="portfolio-title display-1">My Portfolio</h1>
+    <p class="portfolio-text fs-5">Here are some of my projects hosted on GitHub. Click on the links to view more details.</p>
+    <div class="row">
+        {% for project in projects %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.name }}</h5>
+                    <p class="card-text">{{ project.description }}</p>
+                    <p class="card-text">
+                        <small class="text-muted">Language: {{ project.language }}</small>
+                    </p>
+                    <a href="{{ project.html_url }}" class="btn btn-primary" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

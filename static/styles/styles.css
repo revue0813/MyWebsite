@@ -1,7 +1,6 @@
 /* GENERAL AND BASE PAGE */
 body, html {
     background-color: #182235;
-
     margin: 0;
     padding-bottom: 65px;
 }
@@ -84,7 +83,7 @@ body, html {
 }
 
 /* HOMEPAGE */
-.container {
+.index-container {
     display: flex;
 }
 
@@ -321,6 +320,32 @@ body, html {
     text-align: center;
     line-height: 25px; /* Align text vertically */
     color: white;
+    font-weight: bold;
+}
+
+/* PORTFOLIO PAGE */
+.portfolio-container {
+    width: 100%;
+}
+
+.portfolio-title {
+    padding-top: 20px;
+    -webkit-text-stroke: 1px #f8f9fa;
+}
+
+.portfolio-text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card {
+    border-radius: 0.75rem;
+    background-color: rgba(52, 58, 64, 0.5); 
+    color: white;
+}
+
+.card-title {
+    font-size: 1.25rem;
     font-weight: bold;
 }
 
