@@ -1,8 +1,9 @@
 /* GENERAL AND BASE PAGE */
 body, html {
     background-color: #182235;
-    height: 100%;
+
     margin: 0;
+    padding-bottom: 65px;
 }
 
 .wrapper {
@@ -23,10 +24,6 @@ body, html {
 .navbar-collapse .nav-item {
     margin-left: 20px;
     margin-right: 20px;
-}
-
-.footer {
-    height: 56px;
 }
 
 .header-image {
@@ -152,6 +149,32 @@ body, html {
     z-index: 2;
 }
 
+.footer-image {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height: 100px;
+    overflow: hidden;
+    z-index: 9;
+}
+
+.footer-image img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to top, transparent, rgba(24, 34, 53, 1));
+}
 
 /* RESUME, TRANSCRIPT, AND MILITARY PAGE */
 .resume-head, .DD214-head, .TS-head {
