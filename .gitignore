@@ -1,4 +1,5 @@
 .venv/
+.env
 __pycache__/
 static/images/Facebook-Brand-Asset-Pack.zip
 static/images/github-mark-c791e9551fe4.zip

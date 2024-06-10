@@ -69,9 +69,11 @@
     </nav>
     
     <header class="header-image" style="background-image: url('{{ image_url }}');">
-      <img src="{{ url_for('static', filename='images/profile-picture.jpg') }}"
-      alt="Profile Picture"
-      class="profile-picture">
+      <a href="{{ url_for('contact') }}">
+        <img src="{{ url_for('static', filename='images/profile-picture.jpg') }}"
+        alt="Profile Picture"
+        class="profile-picture">
+      </a>
       <div class="header-text-container">
         <div>
           <a href="https://github.com/revue0813" target="_blank">

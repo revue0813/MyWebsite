@@ -1,8 +1,30 @@
-from flask import Flask, render_template, send_from_directory, url_for
 import requests
+import os
+from flask import Flask, render_template, send_from_directory, url_for, request, flash, redirect
+from flask_mail import Mail, Message
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
+app.secret_key = os.getenv('SECRET_KEY')
 
+# Mail config using env variable
+app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
+app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT'))
+app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS') == 'True'
+app.config['MAIL_USE_SSL'] = os.getenv('MAIL_USE_SSL') == 'True'
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+
+# Tests
+print(f"MAIL_SERVER: {os.getenv('MAIL_SERVER')}")
+print(f"MAIL_PORT: {os.getenv('MAIL_PORT')}")
+print(f"MAIL_USE_TLS: {os.getenv('MAIL_USE_TLS')}")
+print(f"MAIL_USE_SSL: {os.getenv('MAIL_USE_SSL')}")
+print(f"MAIL_USERNAME: {os.getenv('MAIL_USERNAME')}")
+
+mail = Mail(app)
 
 @app.route("/")
 def index():
@@ -67,8 +89,22 @@ def links():
         image_url=url_for("static", filename="images/header_image_links.jpg"),
     )
 
-@app.route("/contact/")
+@app.route("/contact/", methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
+
+        msg = Message(subject=f"Contact Form: {name} (From Personal Website)",
+                      sender=email,
+                      recipients=[os.getenv('MAIL_USERNAME')],
+                      body=f"Name: {name}\nEmail: {email}\n\nMessage: {message}")
+        mail.send(msg)
+
+        flash("Your message has been sent successfully!", "success")
+        return redirect(url_for('contact'))
+    
     return render_template(
         "contact.html",
         image_url=url_for("static", filename="images/header_image_contact.jpg"),
@@ -77,7 +113,6 @@ def contact():
 @app.route("/download/<filename>")
 def download_file(filename):
     return send_from_directory(directory="static/documents", path=filename)
-
 
 
 if __name__ == "__main__":  # If this app is not being called as part of a module, then:

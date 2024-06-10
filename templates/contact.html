@@ -1,3 +1,41 @@
 {% extends "base.html" %}
 
-{% block title %}- Contact{% endblock %}
+{% block title %}- Contact Me{% endblock %}
+
+{% block body %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="flash-{{ category }} text-center">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<div class="container clean-background text-light">
+    <h1 class="contact-title display-1 text-center">Contact Me</h1>
+    <p class="contact-text fs-5 text-center">
+        I'd love to hear from you! Whether you have a question about 
+        my work, want to collaborate on a project, or just want to say 
+        hello, feel free to reach out. I'm always open to discussing new 
+        opportunities and ideas.
+    </p>
+    <div>
+        <form method="post" action="{{ url_for('contact') }}">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary">Send</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
