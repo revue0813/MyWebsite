@@ -73,8 +73,6 @@ def portfolio():
         projects = response.json()
     except requests.exceptions.RequestException as e:
         print(f"Error fetching GitHub projects: {e}")
-    
-    print(projects[0])
 
     return render_template(
         "portfolio.html",

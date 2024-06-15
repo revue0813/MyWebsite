@@ -9,22 +9,22 @@
     <h2 class="resume-head clean-background text-light display-3">My Resume</h2>
     <div class="resume-button-container">
       <a
-        href="{{ url_for('download_file', filename='newResume.pdf') }}"
+        href="{{ url_for('download_file', filename='Resume_2.pdf') }}"
         class="btn btn-secondary"
         download
         >Download My Resume (PDF)</a
       >
       <div class="button-space"></div>
       <a
-        href="{{ url_for('download_file', filename='newResume.txt') }}"
+        href="{{ url_for('download_file', filename='Resume_2.docx') }}"
         class="btn btn-secondary"
         download
-        >Download My Resume (TXT)</a
+        >Download My Resume (DOCX)</a
       >
     </div>
     <div class="resume-container">
       <embed
-        src="{{ url_for('static', filename='documents/newResume.pdf') }}#view=Fit"
+        src="{{ url_for('static', filename='documents/Resume_2.pdf') }}#view=Fit"
         type="application/pdf"
         class="embed-responsive"
       />
