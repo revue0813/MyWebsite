@@ -11,7 +11,7 @@ app.secret_key = os.getenv('SECRET_KEY')
 
 # Mail config using env variable
 app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
-app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT'))
+app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT', 587))
 app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS') == 'True'
 app.config['MAIL_USE_SSL'] = os.getenv('MAIL_USE_SSL') == 'True'
 app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
@@ -58,7 +58,7 @@ def military():
 @app.route("/skills/")
 def skills():
     return render_template(
-        "skills.html", 
+        "skills.html",
         image_url=url_for("static", filename="images/header_image_skills.jpg"),
     )
 
@@ -102,7 +102,7 @@ def contact():
 
         flash("Your message has been sent successfully!", "success")
         return redirect(url_for('contact'))
-    
+
     return render_template(
         "contact.html",
         image_url=url_for("static", filename="images/header_image_contact.jpg"),
